@@ -4,6 +4,8 @@ const TodoList = (props) => {
 
     const {
         tasks = [],
+        onDeleteTaskButtonClick,
+        onCheckboxTaskClick,
     } = props
 
     const hasTasks = true
@@ -21,6 +23,8 @@ const TodoList = (props) => {
                     className="todo__item"
                     key={task.id}
                     {...task}
+                    onDeleteTaskButtonClick={onDeleteTaskButtonClick}
+                    onCheckboxTaskClick={onCheckboxTaskClick}
                 />
             ))}
         </ul>
