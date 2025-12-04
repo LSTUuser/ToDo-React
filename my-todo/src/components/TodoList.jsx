@@ -1,7 +1,8 @@
 import TodoItem from "./TodoItem"
+import { memo } from "react"
 
 const TodoList = (props) => {
-
+    console.log(`TodoList`)
     const {
         tasks = [],
         firstIncompleteTaskRef,
@@ -42,4 +43,4 @@ const TodoList = (props) => {
     )
 }
 
-export default TodoList
+export default memo(TodoList)
